@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## full-calendar help
+https://github.com/Jamaks/ng-fullcalendar
+Its is being checked with this url for the full calendar version https://stackblitz.com/edit/ng-fullcalendar-demo?file=app%2Fapp.component.ts

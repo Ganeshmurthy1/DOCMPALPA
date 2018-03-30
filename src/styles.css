@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+@import "~fullcalendar/dist/fullcalendar.min.css";
+.row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+body{
+ background-color:#DBE7F0;
+ font-family: Open Sans;
+}
+.white-text{
+    color: #ffffff;
+}
+.float-right{
+    float: right;
+}
+.upperCase-text{
+    text-transform: uppercase;
+}
+.fc-center h2{
+    font-size: 1rem !important;
+}
+a,button{
+    cursor: pointer;
+}
+.btn.disabled, .btn:disabled{
+    cursor:not-allowed !important;
+}

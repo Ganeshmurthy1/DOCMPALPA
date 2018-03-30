@@ -1,0 +1,54 @@
+.bg-dark-blue{    
+        background: linear-gradient(-90deg, #00335c, #00669A);    
+        height: 80px;
+        padding: 15px 10px;
+         
+}
+.logoAnchr{
+    left:20px;
+    position: absolute;
+}
+.notifyIcons{
+    float: right;
+    padding-top: 15px;
+}
+.notifyIcons li{
+display: inline;
+list-style-type: none;
+padding: 10px 15px;
+}
+.padding-LR-0px{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.navigation-menu{
+    height: 80px;
+    top: -15px;
+    
+    position: absolute; 
+
+}
+.navigation-menu li{
+    padding: 30px 20px;
+}
+.active{
+    background-color: #00335c;
+    color: #ffffff;
+}
+.navigation-menu li a{
+    color: #ffffff;    
+     text-transform: uppercase;
+     font-family: Open Sans;
+     font-size: 16px; 
+     padding: 0px ;
+     font-weight: 600;
+}
+@media (min-width: 1281px) and (max-width: 1441px){
+    .navigation-menu li{
+        padding: 30px 10px;
+    }
+    .navigation-menu li a{         
+         font-size: 14px;          
+    } 
+    
+};

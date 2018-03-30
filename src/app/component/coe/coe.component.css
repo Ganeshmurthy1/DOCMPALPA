@@ -1,0 +1,163 @@
+.main-container-padding{
+    padding: 20px;
+}
+.border-navy{
+    margin: 15px;
+    border:1px solid #00335c;
+}
+.width50-per{
+    width: 37%;
+}
+.width25-per{
+    width: 29%;
+}
+.widthRow21{
+    width: 40%;
+}
+.widthRow22{
+    width: 23%;
+}
+.widthRow23{
+    width: 32%;
+}
+@media (min-width: 1281px) and (max-width: 1441px){
+    .width25-per{
+        width: 28%;
+    } 
+    .tableContainer .table{
+        font-size: 12px !important;
+        }
+        .table td, .table th {
+            padding: 15px 5px;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+        .panel-header{
+            
+            font-size: 13px !important;
+        }
+        .widthRow23{
+            width: 30%;
+        }
+        .flaggedItems ul li{
+            list-style-type: none;
+            padding: 10px 0px;
+            font-size: 12px;
+        }
+        .notification li span:last-child{
+            font-size: 12px !important;
+            color:#707070;
+
+        }
+        .panel-body-R2{
+            min-height: 375px !important;
+            background-color: #ffffff;
+        }  
+        .map1Class{
+            padding: 0px 0px;
+            width: 400px;
+            height: 375px;
+            margin: 35px 10px !important;
+        }
+        .map2Class{
+            width: 100%;
+            height: 400px;
+            margin: 35px 0px !important;
+            padding: 10px;
+        }
+}
+.panel-header{
+    background-color: #00335c;
+    padding: 10px 0px;
+    font-size: 16px;
+}
+.panel-footer{
+    padding: 10px 0px;
+    background-color: #BCE5F9;
+}
+.forwardAnchr{
+    color: #00669A !important;
+    font-size: 14px;
+    text-decoration: underline !important;
+}
+.panel-body{
+    min-height: 400px;
+    background-color: #ffffff;
+}
+.panel-body-R2{
+    min-height: 620px;
+    background-color: #ffffff;
+}
+.tableContainer{
+    padding: 10px 25px;
+
+}
+.tableContainer .table{
+font-size: 15px;
+}
+.tableContainer thead tr th{
+    border-top:none;
+    border-bottom: 1px solid #ccc;
+}
+.tableContainer tbody tr td:last-child{
+    text-align: center;
+}
+.createButton button{
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 16px;
+    padding: 5px 20px;
+    color: #fff;
+    float: right;
+}
+.flaggedItems{
+    padding: 25px;
+}
+.flaggedItems ul{
+    padding: 0px;
+}
+.flaggedItems ul li{
+    list-style-type: none;
+    padding: 10px 0px;
+}
+.flaggedItems ul li span{
+    padding: 10px 10px;
+}
+.notificationDiv{
+    width: 100%;
+    padding: 25px;
+}
+.notification{
+    padding: 0px;
+}
+.notification li{
+    list-style-type: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0px;
+}
+.notification li span{
+    padding: 0px 10px;
+}
+.notification li span:last-child{
+    font-size: 14px;
+    color:#707070;
+}
+.padding-20px{
+    padding: 20px;
+}
+.map1Class{
+    padding: 0px 0px;
+    width: 400px;
+    height: 400px;
+    margin: 60px 10px;
+}
+.map2Class{        
+    width: 100%;
+    height: 400px;
+    margin: 60px 0px;
+    padding: 10px;        
+}
+.map1Modal{
+    display:block;
+    margin:auto;
+}
