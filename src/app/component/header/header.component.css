@@ -48,7 +48,11 @@ padding: 10px 15px;
         padding: 30px 10px;
     }
     .navigation-menu li a{         
-         font-size: 14px;          
+         font-size: 13px;          
     } 
-    
+    .notifyIcons li{
+        display: inline;
+        list-style-type: none;
+        padding: 10px 10px;
+    }
 };

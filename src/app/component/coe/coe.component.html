@@ -1,212 +1,203 @@
- 
- <div class="main-container-padding">
- <div class="row first-row">
-    <div class="padding-10px width25-per border-navy"><div class="row panel-header">
+<div class="main-container-padding">
+  <div class="row first-row">
+    <div class="padding-10px width25-per border-navy">
+      <div class="row panel-header">
         <div class="col-md-10 white-text upperCase-text">Items of Interest / Notification / Alerts</div>
         <div class="col-md-2">
-          <a class="float-right"><img  src="./assets/images/icons/ic_zoom_out.png"/></a>
+          <a class="float-right">
+            <img src="./assets/images/icons/ic_zoom_out.png" />
+          </a>
         </div>
       </div>
       <div class="row panel-body">
         <div class="tableContainer notificationDiv">
-          <ul class="notification">
-            <li><span><img src="./assets/images/icons/ic_iot_1.png" /></span><span>IOI - Trade not pre-cleared and on Restricted List, Jim Fell</span></li>
-            <li><span><img src="./assets/images/icons/ic_iot_2.png" /></span><span>Auto-approve-Entertainment, Jhon Smith, BAML, Dinner, $0.00</span></li>
-            <li><span><img src="./assets/images/icons/ic_iot_2.png" /></span><span>Notification - New Employee Attestations complete; Bill Debier</span></li>
-            <li><span><img src="./assets/images/icons/ic_iot_4.png" /></span><span>Quaterly Portfolio Certification complete - Zhang Min </span></li>
-           </ul>
+          <ul class="notification" *ngFor="let item of dashboardvm.itemofInterestViewModel">
+            <li>
+              <span>
+                <img src="./assets/images/icons/{{item.ioiType}}.png" />
+              </span>
+              <span>{{item.ioiType}}-{{item.description}}</span>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="row panel-footer">
-          <div class="col-md-9"></div>
-          <div class="col-md-3">
-            <a class="float-right forwardAnchr">Full List...</a>
+        <div class="col-md-9"></div>
+        <div class="col-md-3">
+          <a class="float-right forwardAnchr">Full List...</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="padding-10px width25-per border-navy">
+      <div class="row panel-header">
+        <div class="col-md-10 white-text upperCase-text">Flagged Items</div>
+        <div class="col-md-2">
+          <a class="float-right">
+            <img src="./assets/images/icons/ic_zoom_out.png" />
+          </a>
+        </div>
+      </div>
+      <div class="row panel-body">
+        <div class="flaggedItems">
+          <ul *ngFor="let item of dashboardvm.flaggedItem">
+            <li>
+              <span>
+                <input type="checkbox" />
+              </span>
+              <span>{{item.description}}-{{item.createdBy}}</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="row panel-footer">
+        <div class="col-md-9"></div>
+        <div class="col-md-3">
+          <a class="float-right forwardAnchr">Full List...</a>
+        </div>
+      </div>
+    </div>
+    <div class="padding-10px width50-per border-navy">
+      <div class="row panel-header">
+        <div class="col-md-10 white-text upperCase-text">Task / Request Outstanding</div>
+        <div class="col-md-2">
+          <a class="float-right">
+            <img src="./assets/images/icons/ic_zoom_out.png" />
+          </a>
+        </div>
+      </div>
+      <div class="row panel-body">
+        <div class="tableContainer">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Item</th>
+                <th>Status</th>
+                <th>Days to Voilation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of dashboardvm.tradePreclearanceRequestViewModel">
+                <td>{{item.createdBy}}</td>
+                <td>{{item.description}}</td>
+                <td>{{item.status}}</td>
+                <td>{{item.daysToViolation}}</td>
+              </tr>
+
+            </tbody>
+          </table>
+          <div class="createButton">
+            <button>Create New Request</button>
           </div>
         </div>
       </div>
-  
-   <div class="padding-10px width25-per border-navy">
-      <div class="row panel-header">
-          <div class="col-md-10 white-text upperCase-text">Flagged Items</div>
-          <div class="col-md-2">
-            <a class="float-right"><img  src="./assets/images/icons/ic_zoom_out.png"/></a>
-          </div>
+      <div class="row panel-footer">
+        <div class="col-md-9"></div>
+        <div class="col-md-3">
+          <a class="float-right forwardAnchr">Full List...</a>
         </div>
-        <div class="row panel-body">
-         <div class="flaggedItems">
-            <ul>
-              <li><span><input type="checkbox"/></span><span>Monthly Portfolio Review - Mary Wick</span></li>
-              <li><span><input type="checkbox"/></span><span>Spouse Outside Business - Dante Alverez</span></li>
-              <li><span><input type="checkbox"/></span><span>Approved Broker Exception - Jeff Thomas</span></li>
-              <li><span><input type="checkbox"/></span><span>GrEylist Policy Management - Mgmt Signoff</span></li>
-              <li><span><input type="checkbox"/></span><span>ACA Consultant - Discuss Gift thersholds</span></li>
-              <li><span><input type="checkbox"/></span><span>Cybersecurity Committee Agenda</span></li>
-              <li><span><input type="checkbox"/></span><span>Authorize Marketing Material Approvers List</span></li>
-             </ul>
-         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row Second-row">
+    <div class="padding-10px widthRow21 border-navy">
+      <div class="row panel-header">
+        <div class="col-md-10 white-text upperCase-text">Activities Calendar</div>
+        <div class="col-md-2">
+          <a class="float-right">
+            <img src="./assets/images/icons/ic_zoom_out.png" />
+          </a>
+        </div>
+      </div>
+      <div class="row panel-body panel-body-R2">
+        <div class="col-md-12 padding-20px">
+          <div *ngIf="calendarOptions">
+            <ng-fullcalendar #ucCalendar [options]="calendarOptions" (eventClick)="eventClick($event.detail)" (eventDrop)="updateEvent($event.detail)"
+              (eventResize)="updateEvent($event.detail)" (clickButton)="clickButton($event.detail)"></ng-fullcalendar>
+          </div>
 
         </div>
-        <div class="row panel-footer">
-            <div class="col-md-9"></div>
-            <div class="col-md-3">
-              <a class="float-right forwardAnchr">Full List...</a>
-            </div>
-          </div>
-   </div>
-   <div class="padding-10px width50-per border-navy">
-      <div class="row panel-header">
-          <div class="col-md-10 white-text upperCase-text">Task / Request Outstanding</div>
-          <div class="col-md-2">
-            <a class="float-right"><img  src="./assets/images/icons/ic_zoom_out.png"/></a>
-          </div>
-        </div>
-        <div class="row panel-body">
-          <div class="tableContainer">
-          <table class="table">
-                <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Item</th>
-                    <th>Status</th>
-                    <th>Days to Voilation</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Giacomo Fiore</td>
-                    <td>Quaterly Attestation</td>
-                    <td>open</td>
-                    <td>-4</td>
-                  </tr>
-                  <tr>
-                    <td>Marc Simon</td>
-                    <td>Outside Business</td>
-                    <td>Supplemental</td>
-                    <td>5</td>
-                  </tr>
-                  <tr>
-                    <td>Tom Watson</td>
-                    <td>Political Contribution</td>
-                    <td>Initial</td>
-                    <td>7</td>
-                  </tr>
-                  <tr>
-                      <td>Jim McLean(spouse)</td>
-                      <td>Entertainment Review</td>
-                      <td>Recepits</td>
-                      <td>7</td>
-                    </tr>
-                    <tr>
-                        <td>Valerie Warner</td>
-                        <td>New Employee Review</td>
-                        <td>Pending</td>
-                        <td>14</td>
-                      </tr>
-                </tbody>
-              </table>
-              <div class="createButton">
-                <button >Create New Request</button>
-              </div>
-            </div>
-        </div>
-        <div class="row panel-footer">
-            <div class="col-md-9"></div>
-            <div class="col-md-3">
-              <a class="float-right forwardAnchr">Full List...</a>
-            </div>
-          </div>
-   </div>
- </div>
-  
- <div class="row Second-row">
-    <div class="padding-10px widthRow21 border-navy">
-       <div class="row panel-header">
-           <div class="col-md-10 white-text upperCase-text">Activities Calendar</div>
-           <div class="col-md-2">
-             <a class="float-right"><img  src="./assets/images/icons/ic_zoom_out.png"/></a>
-           </div>
-         </div>
-         <div class="row panel-body panel-body-R2">
-            <div class="col-md-12 padding-20px">                
-                <div *ngIf="calendarOptions">
-                   <ng-fullcalendar #ucCalendar [options]="calendarOptions" (eventClick)="eventClick($event.detail)" (eventDrop)="updateEvent($event.detail)"
-                       (eventResize)="updateEvent($event.detail)" (clickButton)="clickButton($event.detail)"></ng-fullcalendar>
-               </div>
-           
-           </div>
-         </div>
-         
+      </div>
+
     </div>
     <div class="padding-10px widthRow22 border-navy">
-       <div class="row panel-header">
-           <div class="col-md-10 white-text upperCase-text">Open Items of Interest By Age</div>
-           <div class="col-md-2">
-             <a class="float-right" (click)="open(map1)"><img  src="./assets/images/icons/ic_zoom_out.png"/></a>
-           </div>
-         </div>
-         <div class="row panel-body panel-body-R2">
-           <img class="map1Class" src="./assets/images/map1.png"/>
-         </div>
-         
+      <div class="row panel-header">
+        <div class="col-md-10 white-text upperCase-text">Open Items of Interest By Age</div>
+        <div class="col-md-2">
+          <a class="float-right" (click)="open(map1)">
+            <img src="./assets/images/icons/ic_zoom_out.png" />
+          </a>
+        </div>
+      </div>
+      <div class="row panel-body panel-body-R2">
+        <img class="map1Class" src="./assets/images/map1.png" />
+      </div>
+
     </div>
-    <div class="padding-10px widthRow23 border-navy"><div class="row panel-header">
-       <div class="col-md-10 white-text upperCase-text">Marketing Reviews Performed</div>
-       <div class="col-md-2">
-         <a class="float-right" (click)="open(map2)"><img  src="./assets/images/icons/ic_zoom_out.png"/></a>
-       </div>
-     </div>
-     <div class="row panel-body panel-body-R2">
-        <img class="map2Class" src="./assets/images/map2.png"/>
-     </div>
-      
-     </div>
+    <div class="padding-10px widthRow23 border-navy">
+      <div class="row panel-header">
+        <div class="col-md-10 white-text upperCase-text">Marketing Reviews Performed</div>
+        <div class="col-md-2">
+          <a class="float-right" (click)="open(map2)">
+            <img src="./assets/images/icons/ic_zoom_out.png" />
+          </a>
+        </div>
+      </div>
+      <div class="row panel-body panel-body-R2">
+        <img class="map2Class" src="./assets/images/map2.png" />
+      </div>
+
+    </div>
   </div>
 </div>
 
-<!-- Bootstrap modal --> 
+<!-- Bootstrap modal -->
 
-  <ng-template #map1 let-c="close" let-d="dismiss">
-      <div class="modal-header">
-        <h4 class="modal-title">Open Items of Interest By Age</h4>
-        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          <img class="map1Modal" src="./assets/images/map1.png"/>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
-      </div>
-    </ng-template>
+<ng-template #map1 let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Open Items of Interest By Age</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <img class="map1Modal" src="./assets/images/map1.png" />
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
 
-    <ng-template #map2 let-c="close" let-d="dismiss">
-        <div class="modal-header">
-          <h4 class="modal-title">Marketing Reviews Performed</h4>
-          <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <img class="map2Class" src="./assets/images/map2.png"/>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
-        </div>
-      </ng-template>
+<ng-template #map2 let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Marketing Reviews Performed</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <img class="map2Class" src="./assets/images/map2.png" />
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
 
-      <ng-template #wizard  let-c="close" let-d="dismiss">
-          <div class="modal-header">
-              <h4 class="modal-title">Modal open</h4>
-              <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <p>Modal open on Shortcut key Ctrl + Y <p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
-            </div>
-        </ng-template>
-        
+<ng-template #wizard let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Modal open</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Modal open on Shortcut key Ctrl + Y
+      <p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>

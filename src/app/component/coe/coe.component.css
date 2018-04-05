@@ -28,7 +28,7 @@
         font-size: 12px !important;
         }
         .table td, .table th {
-            padding: 15px 5px;
+            padding: 10px 2px;
             vertical-align: top;
             border-top: 1px solid #dee2e6;
         }
@@ -54,10 +54,12 @@
             background-color: #ffffff;
         }  
         .map1Class{
-            padding: 0px 0px;
-            width: 400px;
-            height: 375px;
-            margin: 35px 10px !important;
+             
+                padding: 0px 0px;
+                width: 250px  !important;
+                height: 300px  !important;
+                margin: 60px 10px;
+            
         }
         .map2Class{
             width: 100%;
@@ -83,6 +85,8 @@
 .panel-body{
     min-height: 400px;
     background-color: #ffffff;
+    OVERFLOW-Y: SCROLL;
+    height: 400px;
 }
 .panel-body-R2{
     min-height: 620px;

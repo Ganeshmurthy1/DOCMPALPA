@@ -6,10 +6,10 @@ export class CalendarEventService {
     public getEvents(): Observable<any> {
         const dateObj = new Date();
         const yearMonth = dateObj.getUTCFullYear() + '-' + (dateObj.getUTCMonth() + 1);
-     
+     debugger;
         let data: any = [{
             title: 'All Day Event',
-            start: yearMonth + '-01'
+            start: yearMonth + '-01'// yyyy-mm-dd
         },
         {
             title: 'Long Event',
