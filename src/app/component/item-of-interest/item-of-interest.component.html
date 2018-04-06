@@ -1,0 +1,191 @@
+<app-header></app-header>
+
+<div class="main-container-padding">
+    <div class="row first-row">
+        <div class="padding-10px   width100-per border-navy">
+          <div class="row panel-header">
+            <div class="col-md-12 white-text upperCase-text font-12px">Items of Interest - INQUIRY</div>
+             
+          </div>
+          <div class="row panel-body">
+               <div class="col-md-9 minHeightPanel">
+                <div>
+                    <div class="accordion" id="accordion2">
+                        <div class="accordion-group">
+                            <div class="accordion-heading yellowBackground">
+                                <a class="accordion-toggle collapsed " data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                    <i class="fa fa-fw fa-chevron-down"></i><i class="fa fa-fw fa-chevron-right"></i>
+                               <span> <img src="./assets/images/icons/PotentialViolation.png" /></span><span>Item of Interest for Immediate Review - Jim Fell, Options in XYZ Company, Personal Trading Review
+                                </span>
+                                </a>
+                            </div>
+                            <div id="collapseOne" class="accordion-body collapse accord-bodyContent">
+                                <div class="accordion-inner ">
+                                Anim pariatur cliche...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading blueBackground">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                    <i class="fa fa-fw fa-chevron-down"></i>
+                                    <i class="fa fa-fw fa-chevron-right"></i>
+                                    <span> <img src="./assets/images/icons/Alert.png" /></span><span> Code of Ethics/ Personal Trading found Fell's spouse purchased 1000 XYZ calls (100,000 shares) 
+                                      <div class="row alertSubBtn">
+                                          <div class="col-md-3">
+                                        <button class="whitebutton">Trade Not Pre-Cleared</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <button class="whitebutton">Security on Restricted List</button>
+                                            </div>
+                                            <div class="col-md-6">
+                                                
+                                                </div>
+                                      </div>
+                                      </span>
+                                </a>
+                            </div>
+                            <div id="collapseTwo" class="accordion-body collapse accord-bodyContent">
+                                <div class="accordion-inner">
+                                Anim pariatur cliche...
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group">
+                            <div class="accordion-heading redBackground">
+                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                                    <i class="fa fa-fw fa-chevron-down"></i>
+                                    <i class="fa fa-fw fa-chevron-right"></i>
+                                    <div class="row">
+                                        <div class="width10per">
+                                            <img src="./assets/images/icons/Notification.png" />
+                                      </div>
+                                      <div class="width90per">
+                                          <ul class="listypeNone">
+                                              <li>
+                                                  <a href="#"> Email review found Jesse Fell(relative?)</a> asked for oﬄine call to discuss XYZ earnings during blackout period
+                                              </li>
+                                              <li>
+                                                  <p>No negative data found in Marketing Review or Firm Trading Survelliance</p>
+                                              </li>
+                                              <li>
+                                                  <p>No subscription for Expert Network and Research review capabilites. </p>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                           
+                                    </div>
+                                     
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="accordion-body collapse accord-bodyContent">
+                                <div class="accordion-inner">
+                                Anim pariatur cliche...
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+             </div>
+               </div>
+               <div class="col-md-3 border-Left-blue">
+                  <div class="padding-25px text-center"><button class="greenButton">Add Files...</button></div>
+                  <div>
+                    <ol>
+                      <li>adsf</li>
+                      <li>adsf</li>
+                    </ol>
+                  </div>
+               </div>              
+          </div>
+           
+        </div> 
+         
+      </div>
+  <div class="row first-row">
+    <div class="padding-10px width25-per border-navy">
+      <div class="row panel-header">
+        <div class="col-md-12 white-text upperCase-text font-12px">Data Search</div>
+        
+      </div>
+      <div class="row panel-body">
+         
+      </div>
+      <div class="row panel-footer">
+         
+      </div>
+    </div>
+
+    
+    <div class="padding-10px width50-per border-navy">
+      <div class="row panel-header">
+        <div class="col-md-10 white-text upperCase-text font-12px">Resolutions/Action</div>
+        <div class="col-md-2">
+          <a class="float-right">
+            <img src="./assets/images/icons/ic_zoom_out.png" />
+          </a>
+        </div>
+      </div>
+      <div class="row panel-body">
+        <div class="tableContainer">
+          
+           
+        </div>
+      </div>
+      <div class="row panel-footer">
+         
+      </div>
+    </div>
+    <div class="padding-10px width25-per border-navy">
+      <div class="row panel-header">
+        <div class="col-md-10 white-text upperCase-text font-12px">Dispciplinary Actions</div>
+        <div class="col-md-2">
+          <a class="float-right">
+            <img src="./assets/images/icons/ic_zoom_out.png" />
+          </a>
+        </div>
+      </div>
+      <div class="row panel-body">
+         
+
+      </div>
+      <div class="row panel-footer">
+         
+      </div>
+    </div>
+  </div>
+
+ 
+</div>
+<!-- Bootstrap modal -->
+
+<ng-template #map1 let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Open Items of Interest By Age</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <img class="map1Modal" src="./assets/images/map1.png" />
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
+
+<ng-template #map2 let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Marketing Reviews Performed</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <img class="map2Class" src="./assets/images/map2.png" />
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
+
+ 
